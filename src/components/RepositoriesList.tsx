@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Octokit } from '@octokit/rest';
 import { Repo } from '../interfaces/repo';
 
-const octokit = new Octokit();
+const octokit = new Octokit({auth: process.env.OCTOKIT_TOKEN});
 
 interface stateType {
     previousUsername: string,
