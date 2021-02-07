@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
+require('dotenv').config();
 
 function App() {
   return (
