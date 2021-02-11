@@ -19,7 +19,7 @@ class RepositoriesList extends Component<{username: string}, stateType>  {
         this.setRepos = this.setRepos.bind(this);
     }
     setRepos(repos: Repo[]) {
-        this.setState({ repos: repos, foundUser: true });
+        this.setState({ repos: repos.filter(repo => repo.name !== repo.owner.login), foundUser: true });
     }
 
     async componentDidUpdate() {
