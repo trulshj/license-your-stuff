@@ -1,6 +1,7 @@
 .search {
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
 .customInput {
@@ -11,19 +12,20 @@
 }
 
 .customInput input {
-    border: none;
+    border: 2px solid var(--primary-color);
     appearance: none;
-    background: #f2f2f2;
-    padding: 12px;
+    padding: 10px;
     outline: none;
+    margin-right: 20px;
 }
 
 .customInput .placeholder {
+    font-family: 'Fira Code', sans-serif;
     position: absolute;
     left: 12px;
     top: 38px;
     transform: translateY(-50%);
-    color: #aaa;
+    color: var(--tertiary-color);
     transition:
         top .3s ease,
         font-size .3s ease,
@@ -34,14 +36,23 @@
 .customInput input:focus + .placeholder {
     top: 8px;
     font-size: 1rem;
-    color: #222;
+    color: var(--secondary-color);
 }
 
-.search > button {
-    border: none;
-    background-color: bisque;
+.search button {
+    font-family: 'Lato', sans-serif;
+    height: 40px;
+    position: relative;
+    border: 2px solid var(--primary-color);
+    background-color: white;
+    transition: background-color 0.2s ease;
+    font-size: 1rem;
+    padding: 12px;
+    top: 7px;
+    display: inline-flex;
+    align-items: center;
 }
 
-.search > button:hover {
-    background-color: aquamarine;
+.search button:hover {
+    background-color: var(--primary-color);
 }

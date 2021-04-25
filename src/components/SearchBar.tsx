@@ -49,7 +49,7 @@ class SearchBar extends Component<
                         />
                         <span className='placeholder'>username</span>
                     </label>
-                    <button onClick={this.handleClick}>Check Licenses</button>
+                    <button onClick={this.handleClick}>CHECK LICENSES</button>
                 </div>
                 <RepositoriesList username={this.state.searchValue} />
             </div>

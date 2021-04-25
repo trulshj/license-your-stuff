@@ -47,30 +47,36 @@ class RepositoriesList extends Component<{ username: string }, stateType> {
     render() {
         return (
             <div>
-                {this.props.username !== "" && this.state.foundUser
-                    ? `These are ${this.props.username}'s licensed repositories:`
-                    : ""}
-                <ul>
+                <h3>
+                    {this.props.username !== "" && this.state.foundUser
+                        ? `These are ${this.props.username}'s licensed repositories:`
+                        : ""}
+                </h3>
+                <ul className="licensed">
                     {this.state.repos
                         .filter((repo) => repo.license)
                         .map((repo) => (
                             <li key={repo.id}>
-                                <a
-                                    rel='noreferrer'
-                                    target='_blank'
-                                    href={repo.html_url}
-                                >
-                                    {repo.name}{" "}
-                                </a>{" "}
-                                - {repo.license.name}
+                                <span>
+                                    <a
+                                        rel='noreferrer'
+                                        target='_blank'
+                                        href={repo.html_url}
+                                    >
+                                        {repo.name}
+                                    </a>
+                                </span>
+                                &nbsp;-&nbsp;<span>{repo.license.name}</span>
                             </li>
                         ))}
                 </ul>
-                {this.props.username !== "" &&
-                this.state.foundUser &&
-                this.state.repos.some((repo) => !repo.license)
-                    ? "They have some unlicensed ones too:"
-                    : ""}
+                <h3>
+                    {this.props.username !== "" &&
+                    this.state.foundUser &&
+                    this.state.repos.some((repo) => !repo.license)
+                        ? "They have some unlicensed ones too:"
+                        : ""}
+                </h3>
                 <ul>
                     {this.state.repos
                         .filter((repo) => !repo.license)

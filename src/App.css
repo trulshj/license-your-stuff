@@ -1,6 +1,36 @@
+:root {
+    --primary-color: #FF715B;
+    --secondary-color: #1EA896;
+    --tertiary-color: #523F38;
+    --grey-color: #4C5454;
+    --white-color: #FFF;
+
+}
+
 div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.header {
+    margin: 20px;
+}
+
+.header span {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 2;
+}
+
+.header span a {
+    font-family: 'Fira Code', monospace;
+    color: var(--primary-color);
+    text-decoration: underline solid transparent;
+    transition: text-decoration .3s ease;
+}
+
+.header span a:hover {
+    text-decoration: underline solid var(--secondary-color);
 }
