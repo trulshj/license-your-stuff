@@ -25,7 +25,7 @@
     left: 12px;
     top: 38px;
     transform: translateY(-50%);
-    color: var(--tertiary-color);
+    color: var(--grey-color);
     transition:
         top .3s ease,
         font-size .3s ease,
@@ -44,8 +44,11 @@
     height: 40px;
     position: relative;
     border: 2px solid var(--primary-color);
+    color: var(--grey-color);
     background-color: white;
-    transition: background-color 0.2s ease;
+    transition: 
+        background-color 0.2s ease,
+        color 0.2s ease;
     font-size: 1rem;
     padding: 12px;
     top: 7px;
@@ -54,5 +57,6 @@
 }
 
 .search button:hover {
+    color: black;
     background-color: var(--primary-color);
 }
